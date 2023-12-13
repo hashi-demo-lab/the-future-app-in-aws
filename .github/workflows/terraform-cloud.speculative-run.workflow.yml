@@ -14,8 +14,10 @@ on:
     ## RECOMMENDED: Change for your target branch, or include branches you wish to trigger this workflow file.
       - main
     ## RECOMMENDED: Specify to only run this workflow file when terraform configuration has changed.
-    paths:
-      - '**.tf'
+    #paths:
+    #  - '**.tf'
+  workflow_dispatch:
+
 
 ## Add shared Environment Variables across jobs here ##
 env:
