@@ -60,7 +60,7 @@ resource "aws_instance" "this" {
 }
 
 resource "aws_ssm_document" "run_script_document" {
-  name            = "vault_script_document_${var.workspace_type}"
+  name            = "${local.deployment_id}${var.workspace_type}"
   document_type   = "Command"
   document_format = "YAML"
   content         = templatefile("${path.root}/files/future.yaml", { description = "demo" })
